@@ -1,22 +1,22 @@
 import React from 'react';
+import Header from './components/organisms/Header';
+import Sidebar from './components/organisms/Sidebar';
+import styled from 'styled-components/macro';
+
+const MainContentArea = styled.main`
+  display: flex;
+`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MainContentArea>
+        <Sidebar />
+        <div>
+          content
+        </div>
+      </MainContentArea>
     </div>
   );
 }
